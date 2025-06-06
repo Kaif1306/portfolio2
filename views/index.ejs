@@ -1,0 +1,96 @@
+<%- include('partials/boilerplate') %>
+  <body class="m-0 p-0">
+    <%- include('partials/navbar') %>
+
+    <section class="intro-section d-flex flex-column flex-lg-row m-0 p-0">
+      <!-- Left -->
+      <div
+        class="left-section p-4 d-flex flex-column justify-content-center text-center text-lg-start"
+      >
+        <p class="text-warning fw-bold fs-3">WEB DEVELOPER</p>
+        <h1 class="fw-bold display-5">Hello, my name is<br />Kaif Mohammed</h1>
+        <p class="text-muted mt-3">
+          BCA student aiming to become a software developer
+        </p>
+        <p class="text-muted">
+          Experienced in MERN stack, web development, C programming,
+        </p>
+        <p class="text-muted">
+          and learning data science and machine learning. Preparing for junior
+          developer roles.
+        </p>
+        <div class="mt-4">
+          <a href="#projects" class="btn btn-warning me-2 fw-semibold">Projects</a>
+          <a href="https://www.linkedin.com/in/kaif-mohammed-646787224/" class="btn btn-warning me-2 fw-semibold"
+            >LinkedIn</a
+          >
+          <a href="/images/resume.pdf" class="btn btn-warning fw-semibold">View Resume</a>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div
+        class="right-section d-flex align-items-center justify-content-center py-4"
+      >
+        <img
+          src="/images/kaif.jpg"
+          alt="Profile"
+          class="profile-img img-fluid"
+        />
+      </div>
+    </section>
+
+    <!-- projects section -->
+    <section id="projects" class="projects-section py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4" style="color: white;">Projects</h2>
+    <div class="underline mx-auto mb-5"></div>
+
+    <div class="row justify-content-center g-4">
+      <% projects.forEach((project, index) => { %>
+        <div class="col-lg-10">
+          <div class="project-card d-flex flex-column flex-lg-row <%= index % 2 === 1 ? 'flex-lg-row-reverse' : '' %> shadow-sm rounded-4 overflow-hidden">
+
+            <!-- Text -->
+            <div class="p-4 d-flex flex-column justify-content-center bg-white w-100">
+              <h3 class="fw-bold text-center"><%= project.title %></h3>
+              <p class="text-muted text-center"><%= project.description %></p>
+              <a href="<%= project.link %>" target="_blank" class="view-project-btn btn btn-outline-dark mt-2 w-auto">View Project</a>
+            </div>
+
+            <!-- Image -->
+            <div class="project-image">
+              <img src="<%= project.image %>" alt="<%= project.title %>" class="img-fluid object-fit-cover">
+            </div>
+
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<!-- Skills section -->
+ <section id="skills" class="skills-section py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Skills</h2>
+    <div class="underline mx-auto mb-5"></div>
+
+    <div class="row justify-content-center g-4">
+      <% skills.forEach(skill => { %>
+        <div class="col-6 col-md-4 col-lg-3 text-center">
+          <div class="skill-card p-4 bg-white shadow-sm rounded-4 h-100 d-flex flex-column align-items-center justify-content-center">
+            <img src="<%= skill.icon %>" alt="<%= skill.name %>" class="mb-3" style="width: 50px; height: 50px;" />
+            <h5 class="fw-semibold"><%= skill.name %></h5>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

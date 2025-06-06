@@ -1,0 +1,35 @@
+<%- include('partials/boilerplate') %>
+<!-- views/about.ejs -->
+<%- include('partials/navbar') %>
+
+<section class="about-section m-0 p-0 w-100">
+  <div class="container-fluid m-0 p-0">
+    <div class="row g-0 m-0">
+      <!-- Left: Text Content -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center p-5 bg-light">
+        <div class="text-wrapper px-3 px-md-5">
+          <h2 class="fw-bold mb-3">About Me</h2>
+          <p class="text-muted">I'm a passionate web developer who enjoys crafting clean and user-friendly interfaces.</p>
+          <p class="text-muted">I specialize in building responsive websites using modern technologies.</p>
+          <p class="text-muted">I love turning ideas into reality through code and design.</p>
+          <p class="text-muted">Always eager to learn and grow in the ever-evolving tech world.</p>
+          <a href="/images/resume.pdf" class="btn btn-warning mt-3 fw-semibold">View Resume</a>
+        </div>
+      </div>
+
+      <!-- Right: Yellow Background + Centered Rounded Image -->
+<div class="col-md-6 bg-warning d-flex align-items-center justify-content-center p-5">
+  <div class="img-box text-center">
+    <img src="/images/about.jpg" alt="About Image"
+         class="img-fluid rounded-circle shadow"
+         style="width: 300px; height: 300px; object-fit: cover; ">
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<%- include('partials/footer') %>
