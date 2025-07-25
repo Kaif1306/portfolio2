@@ -25,6 +25,12 @@ app.get('/', (req, res) => {
       link: "https://ansaribrother.com"
     },
     {
+      title: "Sew Wave",
+      description: "An E commerce website made for my client using Wordpress",
+      image: "/images/sew.jpg",
+      link: "https://sewwave.com/"
+    },
+    {
       title: "Zerodha Frontend",
       description: "A MERN stack project for clone of zerodha with MongoDB backend.",
       image: "/images/zerodha.jpg",
@@ -36,6 +42,7 @@ app.get('/', (req, res) => {
       image: "/images/wanderlust.jpg",
       link: "https://wanderlust-travel-sl4i.onrender.com/listings"
     },
+    
     
     {
         title : "My Portfolio Website",
